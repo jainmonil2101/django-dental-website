@@ -29,7 +29,7 @@ def contact(request):
         email = request.POST.get('message-email')
         message = request.POST.get('message')
 
-        send_mail(name, message, email, [settings.EMAIL_HOST_USER])
+        send_mail(name, message, email, [settings.EMAIL_HOST_USER], fail_silently=False)
 
         return render(request, 'dental/contact.html', {'name': name})
 
@@ -52,7 +52,7 @@ def appointment(request):
         '''
 
         send_mail('Appointment Request', new_message,
-                  email, [settings.EMAIL_HOST_USER])
+                  email, [settings.EMAIL_HOST_USER],fail_silently=False)
         return render(request, 'dental/appointment.html', {
             'name': name,
             'phone': phone,
