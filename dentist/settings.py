@@ -27,9 +27,10 @@ SECRET_KEY = config('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'django-dento.herokuapp.com']
+# ALLOWED_HOSTS = ['127.0.0.1', 'django-dento.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -125,10 +126,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-
-STATICFILES_DIRS = [
-    BASE_DIR / "static", ]
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static", ]
 
 
 # Email Settings
