@@ -1,0 +1,74 @@
+{% extends 'dental/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<!-- ***** Breadcrumb Area Start ***** -->
+<div class="breadcumb-area bg-img bg-gradient-overlay"
+    style="background-image: url({% static 'dental/img/bg-img/12.jpg' %})">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12">
+                <h2 class="title">Appointment</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="breadcumb--con">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Appointment</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ***** Breadcrumb Area End ***** -->
+
+<!-- ***** Appointment Area Start ***** -->
+
+<center>
+    <h1>Review Your Information</h1>
+    <hr>
+
+    <div>
+        <strong>Name: </strong>
+        <strong class="text-muted">{{name|capfirst}}</strong>
+    </div>
+    <br>
+    <div>
+        <strong>Phone: </strong>
+        <strong class="text-muted">{{phone}}</strong>
+    </div>
+    <br>
+    <div>
+        <strong>Email: </strong>
+        <strong class="text-muted">{{email}}</strong>
+    </div>
+    <br>
+    <div>   
+        <strong>Schedule: </strong>
+        <strong class="text-muted">{{date_time}}</strong>
+    </div>
+    <br>
+    <div>
+        <strong>Message: </strong>
+        <strong class="text-muted">{{message}}</strong>
+    </div>
+    <br>
+<br>
+    <strong>NOTE: </strong>This Appointment hasn't been confirmed yet. We will contact you shortly via Email or Phone to confirm your Appointment.
+    <br><br><br>
+
+
+</center>
+
+<!-- ***** Appointment Area End ***** -->
+
+{% endblock %}
